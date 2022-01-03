@@ -51,10 +51,10 @@ it('No args', async () => {
 
 it('Args', async () => {
   await t(
-    '--a b -c d --e',
-    `> node ./dist_tests/printArgs.js "--a" "b" "-c" "d" "--e"
+    '--a b -c d "a b c"',
+    `> node ./dist_tests/printArgs.js "--a" "b" "-c" "d" "a b c"
 
-[ '--a', 'b', '-c', 'd', '--e' ]
+[ '--a', 'b', '-c', 'd', 'a b c' ]
 `,
   );
 });

@@ -7,7 +7,6 @@ export default async function spawnMain(cmd: string, args: ReadonlyArray<string>
 
   return new Promise((resolve, reject) => {
     const process = spawn(cmd, args, {
-      shell: true,
       stdio: 'inherit',
     });
     process.on('close', (code) => {
